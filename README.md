@@ -16,9 +16,12 @@ Analytical dashboards (gold layer) based on a star schema consisting of `fact_sa
 - Creating VIEWS for report reusability
 - Conscious choice of reference point for metrics: customer age and recency are calculated from the latest date in the dataset (historical context), while product recency is calculated from the real current date to mimic a live system. Both logics are documented directly within the code in Russian and English.
 
-## Data
 
-The data schema was adapted from an educational SQL course (dimensional modeling: fact + dim tables).
+## Data Source
+
+The data schema is based on a standard educational e-commerce model adapted for dimensional modeling analysis. 
+It simulates real-world scenarios involving sales facts and customer/product dimensions to demonstrate complex SQL reporting techniques.
+
 
 ## Files
 
@@ -57,8 +60,7 @@ fact_sales + dim_customers + dim_products.
 
 ## Данные
 
-Схема данных адаптирована из учебного курса по SQL
-(дименсиональное моделирование: fact + dim таблицы).
+Схема данных основана на стандартной образовательной модели электронной коммерции, адаптированной для анализа многомерного моделирования. Она имитирует реальные сценарии, включающие данные о продажах и измерения клиентов/товаров, для демонстрации сложных методов создания отчетов с использованием SQL.
 
 ## Файлы
 
