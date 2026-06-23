@@ -1,5 +1,36 @@
 # Customer & Product Analytics Reports | SQL
 
+Analytical dashboards (gold layer) based on a star schema consisting of `fact_sales`, `dim_customers`, and `dim_products`.
+
+## What's Inside
+
+- **report_customers** — customer age, order count, average check value, recency / days since last purchase, customer lifetime duration, segmentation (VIP/Regular/New).
+- **report_product** — revenue, order count, number of customers, average selling price, recency / days since last sale, segmentation by sales volume (High-Performer/Mid-Range/Low-Performer).
+- Product segmentation based on cost ranges.
+
+## SQL Techniques
+
+- CTEs (Multi-step WITH chains)
+- Date handling: TIMESTAMPDIFF, period aggregations
+- CASE-based segmentation with division-by-zero protection
+- Creating VIEWS for report reusability
+- Conscious choice of reference point for metrics: customer age and recency are calculated from the latest date in the dataset (historical context), while product recency is calculated from the real current date to mimic a live system. Both logics are documented directly within the code in Russian and English.
+
+## Data
+
+The data schema was adapted from an educational SQL course (dimensional modeling: fact + dim tables).
+
+## Files
+
+`customer_product_reports_final.sql` — all queries with inline comments
+
+
+
+=============================================================
+Русская версия
+
+# Customer & Product Analytics Reports | SQL
+
 Аналитические витрины (gold-слой) на основе звёздной схемы
 fact_sales + dim_customers + dim_products.
 
