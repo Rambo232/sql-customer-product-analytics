@@ -27,7 +27,7 @@ The data schema was adapted from an educational SQL course (dimensional modeling
 
 
 ===========================================================================================================================================
-Русская версия
+# Русская версия
 
 # Customer & Product Analytics Reports | SQL
 
