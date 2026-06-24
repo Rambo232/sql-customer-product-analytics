@@ -10,12 +10,16 @@ Analytical dashboards (gold layer) based on a star schema consisting of `fact_sa
 
 ## SQL Techniques
 
-- CTEs (Multi-step WITH chains)
-- Date handling: TIMESTAMPDIFF, period aggregations
+- CTEs (multi-step WITH chains)
+- Cumulative & period-based aggregation via TIMESTAMPDIFF
 - CASE-based segmentation with division-by-zero protection
-- Creating VIEWS for report reusability
-- Conscious choice of reference point for metrics: customer age and recency are calculated from the latest date in the dataset (historical context), while product recency is calculated from the real current date to mimic a live system. Both logics are documented directly within the code in Russian and English.
-
+- Reusable analytical VIEWs
+- Deliberate choice of time anchor per metric: customer age and
+  recency are computed against the dataset's last order date
+  (since the data is historical), while product recency is
+  computed against the real current date — mirroring how that
+  metric behaves in a live system. Both choices are documented
+  inline, in Russian and English.
 
 ## Data Source
 
